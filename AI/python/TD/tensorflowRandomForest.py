@@ -19,5 +19,3 @@ model.summary()
 # Evaluate the model.
 model.evaluate(test_ds)
 
-# Export the model to a SavedModel.
-model.save("data/model")

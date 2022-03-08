@@ -29,7 +29,9 @@ model = tf.keras.Sequential([
 model.compile(loss = tf.losses.MeanSquaredError(),
                       optimizer = tf.optimizers.Adam())
 
-model.fit(car_data_test, car_label, epochs=40)                      
+model.fit(car_data_test, car_label, epochs=40)    
+
+print("car label",car_label)
 
 # Evaluate the model on the test data using `evaluate`
 print("Evaluate on test data")
