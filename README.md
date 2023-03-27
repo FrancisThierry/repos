@@ -1,3 +1,3 @@
 # repos
-AI Folder : Most python script to manage AI projects
-AR : MOst NodeJS projects to mange AR and somme C# Script for Unity
+## AI Folder : Most python scripts to manage AI projects
+## AR : Most NodeJS projects to manage AR and somme C# Script for Unity
