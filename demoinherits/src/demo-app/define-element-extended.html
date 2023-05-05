@@ -1,0 +1,38 @@
+<dom-module id="define-element-extended">
+
+    <!-- <template>Base class template has been overridden. Hello from DefineElementExtended!</template> -->
+    <template>
+        <h2>Extended template</h2>
+        <!-- superclass template will go here -->
+        <div id="footer">
+          <label>Une autre liste déroulante</label>
+          <select><option>A</option><option>B</option></select>
+        </div>
+      </template>
+    <script>
+    (function() {
+      let memorizedTemplate;
+      class DefineElementExtended extends DefineElement {
+        static get is() { return 'define-element-extended' }
+
+        static get template() {
+          if (!memorizedTemplate) {
+            // Retrieve this element's dom-module template
+            memorizedTemplate = Polymer.DomModule.import(this.is, 'template');
+
+            // Clone the contents of the superclass template
+            let superTemplateContents = document.importNode(DefineElement.template.content, true);
+
+            // Insert the superclass contents
+            let footer = memorizedTemplate.content.querySelector('#footer');
+            memorizedTemplate.content.insertBefore(superTemplateContents, footer);
+          }
+          return memorizedTemplate;
+        }
+
+
+      }
+      customElements.define(DefineElementExtended.is, DefineElementExtended);
+    })();
+    </script>
+  </dom-module>

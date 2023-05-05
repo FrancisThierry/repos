@@ -1,0 +1,39 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<dom-module id = "define-element">
+    <template>
+       <label>Une liste déroulante</label>
+       <select><option>1</option><option>2</option><option>3</option></select>
+    </template>
+    
+    <script>
+      /**
+       * @customElement
+       * @polymer
+       */
+      class DefineElement extends Polymer.Element {
+        static get is() { return 'define-element'; }
+        static get properties() {
+          return {
+            prop1: {
+              type: String,
+              value: 'define-element'
+            }
+          };
+        }
+      }
+  
+      window.customElements.define(DefineElement.is, DefineElement);
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+ </dom-module>

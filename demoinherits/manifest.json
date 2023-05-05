@@ -1,0 +1,7 @@
+{
+  "name": "DemoHeritage",
+  "short_name": "DemoHeritage",
+  "description": "just test inheritage",
+  "start_url": "/",
+  "display": "standalone"
+}
